@@ -1,0 +1,17 @@
+﻿@model List<Person>
+
+@foreach (var people in Model)
+{
+    var color = "";
+    if (people.Id%2==0 && people.FirstName.Length <=6)
+    {
+        color = "Red";
+    }
+    else
+    {
+        color = "Blue";
+    }
+    <h5>ID: <span style="color:@color">@people.Id </span> , LastName: @people.LastName, FirstName: <span style="color:@color">@people.FirstName</span> , MiddleName: @people.MiddleName DateTime: <span style="color: orangered">@DateTime.Now</span> </h5>
+
+
+}
